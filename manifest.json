@@ -1,0 +1,12 @@
+{
+  "id": "vault-summary-engine",
+  "name": "Vault Summary Engine",
+  "version": "0.1.0",
+  "minAppVersion": "0.15.0",
+  "description": "Generate summaries of your vault's notes.",
+  "author": "PtiCalin",
+  "authorUrl": "https://github.com/PtiCalin",
+  "main": "dist/main.js",
+  "css": "styles.css",
+  "isDesktopOnly": false
+}

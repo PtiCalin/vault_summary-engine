@@ -1,0 +1,17 @@
+{
+  "name": "vault-summary-engine",
+  "version": "0.1.0",
+  "description": "Obsidian plugin to generate summaries for your vault.",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^3.29.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^5.2.0"
+  }
+}
