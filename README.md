@@ -26,6 +26,7 @@ git clone https://github.com/PtiCalin/vault_summary-engine.git
 cd vault_summary-engine
 npm install
 ```
+In Codex environments, `.config/setup.sh` runs automatically to install dependencies.
 
 Build the plugin to generate `main.js`:
 
