@@ -17,12 +17,16 @@ export interface NoteSummary {
 
 /**
  * 🧠 Syncs metadata from vault notes into quick-read summaries.
+ *
+ * Walks through Markdown files and surfaces keywords, word counts and
+ * reading time so other components can show a concise preview.
  */
 export default class SummaryEngine {
     private app: App;
 
     /**
-     * Creates the engine bound to a specific Obsidian app instance.
+     * 🧠 Binds the engine to the Obsidian app instance so we can poke at
+     * the vault.
      */
     constructor(app: App) {
         this.app = app;
@@ -30,6 +34,9 @@ export default class SummaryEngine {
 
     /**
      * 🧠 Walks every Markdown file and assembles a summary record.
+     *
+     * Each summary bundles title, tags, word count, reading time and
+     * a set of keywords.
      */
     async indexVault(): Promise<NoteSummary[]> {
         const files = this.app.vault.getMarkdownFiles();
