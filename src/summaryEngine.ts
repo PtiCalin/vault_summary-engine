@@ -15,13 +15,22 @@ export interface NoteSummary {
     keywords: string[];
 }
 
+/**
+ * 🧠 Collects vault notes into quick-read summaries.
+ */
 export default class SummaryEngine {
     private app: App;
 
+    /**
+     * Creates the engine bound to a specific Obsidian app instance.
+     */
     constructor(app: App) {
         this.app = app;
     }
 
+    /**
+     * 🧠 Builds summaries for every Markdown file in the vault.
+     */
     async indexVault(): Promise<NoteSummary[]> {
         const files = this.app.vault.getMarkdownFiles();
         const summaries: NoteSummary[] = [];
