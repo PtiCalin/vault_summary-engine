@@ -6,7 +6,7 @@
   "description": "Generate summaries of your vault's notes.",
   "author": "PtiCalin",
   "authorUrl": "https://github.com/PtiCalin",
-  "main": "main.js",
+  "main": "dist/main.js",
   "css": "styles.css",
   "isDesktopOnly": false
 }
