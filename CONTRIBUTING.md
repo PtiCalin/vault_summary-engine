@@ -43,6 +43,12 @@ git commit -m "Add: your amazing contribution"
 git push origin feat/amazing-idea
 ```
 
+### 4. Run Tests Locally
+
+```bash
+npm test
+```
+
 ---
 
 ## 📦 Open a Pull Request
