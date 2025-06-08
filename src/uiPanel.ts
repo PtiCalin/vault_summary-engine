@@ -9,7 +9,7 @@ import SummaryEngine, { NoteSummary } from './summaryEngine';
 export const VIEW_TYPE_SUMMARY = 'vault-summary-view';
 
 /**
- * 🧠 Displays vault summaries in a side panel.
+ * 🧠 Presents your summaries inside a handy sidebar panel.
  */
 export class SummaryPanel extends ItemView {
     private engine: SummaryEngine;
@@ -34,7 +34,7 @@ export class SummaryPanel extends ItemView {
     }
 
     /**
-     * 🧠 Loads summaries when the view becomes visible.
+     * 🧠 Refreshes the panel every time the view opens.
      */
     async onOpen() {
         const container = this.containerEl.children[1];

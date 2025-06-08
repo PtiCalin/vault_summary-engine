@@ -4,17 +4,19 @@
 // Output: wordCount, readingTime, extractKeywords
 // ---
 /**
- * 🧠 Counts the number of words in a text string.
+ * 🧠 Tallies how many words appear in the supplied text.
  *
- * Splits on whitespace and ignores empty pieces.
+ * Splits on whitespace and drops any empty pieces so you get an
+ * accurate snapshot of length.
  */
 export function wordCount(text: string): number {
     return text.split(/\s+/).filter(Boolean).length;
 }
 
 /**
- * 🧠 Estimates the reading time in minutes for a given text.
+ * 🧠 Estimates how long the text takes to read.
  *
+ * Uses `wordCount` with a default speed of 200 words per minute.
  * @param text - The text to analyse.
  * @param wordsPerMinute - Speed used for the estimate. Defaults to 200.
  */
@@ -23,10 +25,12 @@ export function readingTime(text: string, wordsPerMinute = 200): number {
 }
 
 /**
- * 🧠 Derives common keywords from a text snippet.
+ * 🧠 Digs out high-frequency terms from a block of text.
  *
- * Non-word characters are stripped and words shorter than four
- * characters are ignored.
+ * Non-word characters are stripped and only words longer than three
+ * letters are considered.
+ * @param text - The text to analyse.
+ * @param limit - Maximum number of keywords to return. Defaults to 5.
  */
 export function extractKeywords(text: string, limit = 5): string[] {
     const words = text
