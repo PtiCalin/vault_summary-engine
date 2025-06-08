@@ -34,6 +34,7 @@ npm run build
 ```
 
 Copy `manifest.json`, `styles.css` and the contents of `dist/` into your Obsidian vault's `.obsidian/plugins/vault-summary-engine/` folder and enable the plugin from Obsidian's settings.
+Refer to `versions.json` for the minimum supported Obsidian version for each plugin release.
 
 ---
 
@@ -44,6 +45,7 @@ src/           → TypeScript source files
 styles.css     → Plugin styles
 manifest.json  → Obsidian plugin manifest
 dist/          → Compiled output
+versions.json  → Maps plugin versions to minimum Obsidian version
 ```
 
 ---
