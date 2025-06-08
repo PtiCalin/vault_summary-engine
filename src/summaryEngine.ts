@@ -1,4 +1,4 @@
-import { App, TFile, MetadataCache } from 'obsidian';
+import { App, TFile } from 'obsidian';
 import { extractKeywords, readingTime, wordCount } from './utils';
 
 export interface NoteSummary {
