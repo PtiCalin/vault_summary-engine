@@ -1,10 +1,8 @@
-/*
- * === utils.ts ===
- * Purpose: Helper functions for analyzing text.
- * Dependencies: none
- * Output: wordCount, readingTime, extractKeywords
- * ---
- */
+// === utils.ts ===
+// Purpose: Helper functions for analyzing text.
+// Dependencies: none
+// Output: wordCount, readingTime, extractKeywords
+// ---
 /**
  * 🧠 Counts the number of words in a text string.
  *
