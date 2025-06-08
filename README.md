@@ -27,13 +27,13 @@ cd vault_summary-engine
 npm install
 ```
 
-Build the plugin to generate the `dist/` folder:
+Build the plugin to generate `main.js`:
 
 ```bash
 npm run build
 ```
 
-Copy `manifest.json`, `styles.css` and the contents of `dist/` into your Obsidian vault's `.obsidian/plugins/vault-summary-engine/` folder and enable the plugin from Obsidian's settings.
+Copy `manifest.json`, `styles.css` and `main.js` into your Obsidian vault's `.obsidian/plugins/vault-summary-engine/` folder and enable the plugin from Obsidian's settings.
 Refer to `versions.json` for the minimum supported Obsidian version for each plugin release.
 
 ---
@@ -44,7 +44,7 @@ Refer to `versions.json` for the minimum supported Obsidian version for each plu
 src/           → TypeScript source files
 styles.css     → Plugin styles
 manifest.json  → Obsidian plugin manifest
-dist/          → Compiled output
+main.js        → Compiled output
 versions.json  → Maps plugin versions to minimum Obsidian version
 ```
 
@@ -53,6 +53,16 @@ versions.json  → Maps plugin versions to minimum Obsidian version
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open issues or pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## 🚢 Publishing a Release
+
+Before creating a release, ensure the compiled file is up to date by running:
+
+```bash
+npm run build
+```
 
 ---
 
