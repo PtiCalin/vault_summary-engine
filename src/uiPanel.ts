@@ -8,6 +8,9 @@ import SummaryEngine, { NoteSummary } from './summaryEngine';
 
 export const VIEW_TYPE_SUMMARY = 'vault-summary-view';
 
+/**
+ * 🧠 Displays vault summaries in a side panel.
+ */
 export class SummaryPanel extends ItemView {
     private engine: SummaryEngine;
 
@@ -16,14 +19,23 @@ export class SummaryPanel extends ItemView {
         this.engine = engine;
     }
 
+    /**
+     * 🧠 Returns the view type identifier used by Obsidian.
+     */
     getViewType(): string {
         return VIEW_TYPE_SUMMARY;
     }
 
+    /**
+     * 🧠 Title shown in the workspace tab.
+     */
     getDisplayText(): string {
         return 'Vault Summary';
     }
 
+    /**
+     * 🧠 Loads summaries when the view becomes visible.
+     */
     async onOpen() {
         const container = this.containerEl.children[1];
         container.empty();
@@ -32,6 +44,9 @@ export class SummaryPanel extends ItemView {
         this.renderSummaries(container, summaries);
     }
 
+    /**
+     * 🧠 Inserts summary items into the container element.
+     */
     private renderSummaries(container: HTMLElement, summaries: NoteSummary[]) {
         for (const summary of summaries) {
             const item = container.createDiv('summary-item');
