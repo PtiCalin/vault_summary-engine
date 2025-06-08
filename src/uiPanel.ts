@@ -10,10 +10,16 @@ export const VIEW_TYPE_SUMMARY = 'vault-summary-view';
 
 /**
  * 🧠 Presents your summaries inside a handy sidebar panel.
+ *
+ * Handles rendering of note statistics by teaming up with the
+ * `SummaryEngine`.
  */
 export class SummaryPanel extends ItemView {
     private engine: SummaryEngine;
 
+    /**
+     * 🧠 Stashes the engine instance and wires up the base view.
+     */
     constructor(leaf: WorkspaceLeaf, engine: SummaryEngine) {
         super(leaf);
         this.engine = engine;

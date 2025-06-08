@@ -8,6 +8,9 @@
  *
  * Splits on whitespace and drops any empty pieces so you get an
  * accurate snapshot of length.
+ *
+ * @param text - Content to measure.
+ * @returns Total number of word tokens.
  */
 export function wordCount(text: string): number {
     return text.split(/\s+/).filter(Boolean).length;
@@ -17,8 +20,10 @@ export function wordCount(text: string): number {
  * 🧠 Estimates how long the text takes to read.
  *
  * Uses `wordCount` with a default speed of 200 words per minute.
+ *
  * @param text - The text to analyse.
  * @param wordsPerMinute - Speed used for the estimate. Defaults to 200.
+ * @returns Approximate minutes needed to read the text.
  */
 export function readingTime(text: string, wordsPerMinute = 200): number {
     return Math.ceil(wordCount(text) / wordsPerMinute);
@@ -29,8 +34,10 @@ export function readingTime(text: string, wordsPerMinute = 200): number {
  *
  * Non-word characters are stripped and only words longer than three
  * letters are considered.
+ *
  * @param text - The text to analyse.
  * @param limit - Maximum number of keywords to return. Defaults to 5.
+ * @returns Ranked keywords in lower case.
  */
 export function extractKeywords(text: string, limit = 5): string[] {
     const words = text
