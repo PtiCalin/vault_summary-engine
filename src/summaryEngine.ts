@@ -16,7 +16,7 @@ export interface NoteSummary {
 }
 
 /**
- * 🧠 Collects vault notes into quick-read summaries.
+ * 🧠 Syncs metadata from vault notes into quick-read summaries.
  */
 export default class SummaryEngine {
     private app: App;
@@ -29,7 +29,7 @@ export default class SummaryEngine {
     }
 
     /**
-     * 🧠 Builds summaries for every Markdown file in the vault.
+     * 🧠 Walks every Markdown file and assembles a summary record.
      */
     async indexVault(): Promise<NoteSummary[]> {
         const files = this.app.vault.getMarkdownFiles();
