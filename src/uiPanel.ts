@@ -1,10 +1,8 @@
-/*
- * === uiPanel.ts ===
- * Purpose: Render the vault summary panel view.
- * Dependencies: obsidian, summaryEngine.ts
- * Output: SummaryPanel class and VIEW_TYPE_SUMMARY constant
- * ---
- */
+// === uiPanel.ts ===
+// Purpose: Render the vault summary panel view
+// Dependencies: obsidian, summaryEngine.ts
+// Output: SummaryPanel class and VIEW_TYPE_SUMMARY constant
+// ---
 import { ItemView, WorkspaceLeaf } from 'obsidian';
 import SummaryEngine, { NoteSummary } from './summaryEngine';
 

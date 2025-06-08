@@ -1,10 +1,8 @@
-/*
- * === main.ts ===
- * Purpose: Obsidian plugin entry point and settings management.
- * Dependencies: obsidian, summaryEngine.ts, uiPanel.ts
- * Output: VaultSummaryEnginePlugin and SummarySettingTab
- * ---
- */
+// === main.ts ===
+// Purpose: Obsidian plugin entry point and settings management
+// Dependencies: obsidian, summaryEngine.ts, uiPanel.ts
+// Output: VaultSummaryEnginePlugin and SummarySettingTab
+// ---
 import { Plugin, PluginSettingTab, Setting, WorkspaceLeaf } from 'obsidian';
 import SummaryEngine from './summaryEngine';
 import { SummaryPanel, VIEW_TYPE_SUMMARY } from './uiPanel';
