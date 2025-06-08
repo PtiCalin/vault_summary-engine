@@ -42,7 +42,13 @@ export default class SummaryEngine {
         const files = this.app.vault.getMarkdownFiles();
         const summaries: NoteSummary[] = [];
         for (const file of files) {
-            const content = await this.app.vault.cachedRead(file);
+            let content: string;
+            try {
+                content = await this.app.vault.cachedRead(file);
+            } catch (err) {
+                console.warn(`⚠️ Could not read ${file.path}`);
+                continue;
+            }
             const fm = this.app.metadataCache.getFileCache(file)?.frontmatter ?? {};
             const tags = Array.isArray(fm.tags)
                 ? fm.tags
