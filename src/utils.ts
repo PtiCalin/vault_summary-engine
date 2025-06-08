@@ -1,3 +1,8 @@
+// === utils.ts ===
+// Purpose: Helper functions for analyzing text.
+// Dependencies: none
+// Output: wordCount, readingTime, extractKeywords
+// ---
 export function wordCount(text: string): number {
     return text.split(/\s+/).filter(Boolean).length;
 }

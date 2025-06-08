@@ -1,3 +1,8 @@
+// === summaryEngine.ts ===
+// Purpose: Build note summaries by scanning the vault.
+// Dependencies: obsidian, utils.ts
+// Output: NoteSummary interface and SummaryEngine class
+// ---
 import { App, TFile } from 'obsidian';
 import { extractKeywords, readingTime, wordCount } from './utils';
 
