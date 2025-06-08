@@ -28,13 +28,13 @@ npm install
 ```
 In Codex environments, `.config/setup.sh` runs automatically to install dependencies.
 
-Build the plugin to generate `main.js`:
+Build the plugin to generate `dist/main.js`:
 
 ```bash
 npm run build
 ```
 
-Copy `manifest.json`, `styles.css` and `main.js` into your Obsidian vault's `.obsidian/plugins/vault-summary-engine/` folder and enable the plugin from Obsidian's settings.
+Copy `manifest.json`, `styles.css` and `dist/main.js` into your Obsidian vault's `.obsidian/plugins/vault-summary-engine/` folder and enable the plugin from Obsidian's settings.
 Refer to `versions.json` for the minimum supported Obsidian version for each plugin release.
 
 ## Setup Notes
@@ -49,7 +49,7 @@ Dependencies are installed automatically by `.config/setup.sh`. If you are in an
 src/           → TypeScript source files
 styles.css     → Plugin styles
 manifest.json  → Obsidian plugin manifest
-main.js        → Compiled output
+dist/main.js   → Compiled output
 versions.json  → Maps plugin versions to minimum Obsidian version
 ```
 
